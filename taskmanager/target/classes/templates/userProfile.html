@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+      <head>
+      <title>TaskManager</title>
+      </head>
+      
+      <body>
+      <h1>Your Profile</h1>
+      <table>
+      <tr><td>Username</td> <td th:text="${credentials.username}"> </td>
+      <tr><td>first Name</td> <td th:text="${loggedUser.firstName}"> </td>
+      <tr><td>last Name</td> <td th:text="${loggedUser.lastName}"> </td>
+      <tr><td>Role</td> <td th:text="${credentials.role}"> </td>
+      <tr><td>Registered at:</td> <td th:text="${loggedUser.creationTimestamp}"> </td>
+      <tr><td>Last Update at:</td> <td th:text="${loggedUser.lastUpdateTimestamp}"> </td>
+      </table>
+       <h4> <a href="/users/me/update">Update Profile</a></h4>
+       <h4> <a href="/home">Return home</a></h4>
+      </body>
+      </html>
